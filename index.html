@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300&family=Roboto:wght@400;700&family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header class="primary-header">
+      <div class="container">
+        <!-- We will not use flex much in this project
+        so there is no need to call this class (flex) so 
+      we call this nav-wrapper -->
+        <div class="nav-wrapper">
+          <a href="#"><img src="./images/logo.svg" alt="Manage" /></a>
+          <!-- aria-controls: what that button control, cause button 
+          itself nothing happening-->
+
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="flase">
+            <!-- aria-hidden="true" means the thing that not paid attention to 
+           
+          general rule of aria is less aria you need better-->
+            <img
+              class="icon-hamburger"
+              src="images/icon-hamburger.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              class="icon-close"
+              src="images/icon-close.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="primary-navigation id="primary-navigation">
+            <!-- ul>li*5>a -->
+            <!-- the thing with aria-control that it can't look at
+          to class so we need add id just like the id below (id="primary-navigation")  -->
+            <!-- id's for linking things together
+          and for hooking with javascript -->
+            <ul
+              
+              aria-label="Primary"
+              role="list"
+              class="nav-list"
+              id="primary-navigation"
+            >
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </nav>
+          <button class="button display-sm-none display-md-inline-flex" >Get Started</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ctrl + shift + L TO 
+        SELECT ALL EXISTANT ELEMNT 
+      Before using that shortcut highlight that 
+      elemnt with < and >-->
+      <section class="padding-block-900">
+        <div class="container">
+          <div class="even-columns">
+            <div>
+              <h1 class="fs-primary-heading fw-bold">
+                Bring everyone together to build better products.
+              </h1>
+              <!-- p+button -->
+              <p>
+                Manage makes it simple for software teamos to paln day-to-day
+                tasks while keeping the larger team goals in view
+              </p>
+              <button class="button">Get Started</button>
+            </div>
+            <div>
+              <img src="./images/illustration-intro.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="padding-block-900">
+        <div class="container">
+          <div class="even-columns">
+            <div>
+              <h2 class="fs-secondary-heading fw-bold">
+                What's different about Manage?
+              </h2>
+              <p>
+                Manage provide all the functionality your team needs. without
+                the complexity. Our software is tailor-made for modern digital
+                product teams.
+              </p>
+            </div>
+            <div>
+              <!-- (h3.fs-600.fw-bold)+p -->
+              <ul class="numered-items" role="list">
+                <li>
+                  <h3 class="fs-600 fw-bold">Track company-wide progress</h3>
+                  <p>
+                    See how your day-to-day tasks fit into the wirder vision. Go
+                    from tracking progress at the milestone level all the way
+                    done to the smallest of details. Never lose sight of the
+                    bigger picture again.
+                  </p>
+                </li>
+                <li>
+                  <h3 class="fs-600 fw-bold">Advanced built-in reports</h3>
+                  <p>
+                    Set internal delivery estimates and track progress toward
+                    company goals. Our customisable dashboard helps you build
+                    out the reports you need to keep key stakeholders informed.
+                  </p>
+                </li>
+                <li>
+                  <h3 class="fs-600 fw-bold">Everything need in one place</h3>
+                  <p>
+                    Stop jumping from one service to another to communicate,
+                    store files, track tasks and share documents. Manage offers
+                    an all-in-one team productivity solution.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="carousel padding-block-700">
+        <h2 class="fs-secondary-heading fw-bold">What they've said</h2>
+        <!-- Carousel here -->
+        <button class="button">Get Started</button>
+      </section>
+
+      <section class="cta padding-block-700 bg-accent-400 text-neutral-100">
+        <div class="container">
+          <div class="even-columns">
+            <div>
+              <p class="fs-secondary-heading fw-bold">
+                Simplify how your team works today.
+              </p>
+            </div>
+            <div>
+              <button class="button" data-type="inverted">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="padding-block-700 bg-neutral-900 text-neutral-100">
+      <div class="container">
+        <div class="even-columns">
+          <div>
+            <a href="#"><img src="./images/logo.svg" alt="Manage" /></a>
+            <ul role="list" aria-label="Social links">
+              <!-- aria-label: this is important if there is
+              no actual text in a link and just img
+            you have something to explain what that img is -->
+              <li><a aria-label="facebook" href="#"></a></li>
+              <li><a aria-label="youtube" href="#"></a></li>
+              <li><a aria-label="twitter" href="#"></a></li>
+              <li><a aria-label="pinterest" href="#"></a></li>
+              <li><a aria-label="instagram" href="#"></a></li>
+            </ul>
+          </div>
+          <div>
+            <nav class="footer-nav">
+              <ul aria-label="Footer" role="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <form action="">
+              <input type="text" tpye="email" />
+              <button class="button"></button>
+              <p>Copyright 2020. All Rights Reserved</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
